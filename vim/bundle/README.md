@@ -58,7 +58,7 @@ dependencies. SnipMate depends on [vim-addon-mw-utils](https://github.com/MarcWe
 [tlib](https://github.com/tomtom/tlib_vim.git). Since SnipMate does not ship with any snippets, we suggest
 looking at the [vim-snippets](https://github.com/honza/vim-snippets) repository.
 
-* Using [Use Tim Pope's Pathogen](https://github.com/tpope/vim-pathogen), run the following commands:
+* Using [Tim Pope's Pathogen](https://github.com/tpope/vim-pathogen), run the following commands:
 
 ```
 cd ~/.vim/bundle
