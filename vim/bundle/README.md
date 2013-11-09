@@ -36,6 +36,7 @@ Observe:
     git clone git://github.com/tpope/vim-sensible.git
 
 ## Plugins `cd ~/.vim/bundle` copy link `git clone` paste:
+* [emmet-vim](https://github.com/mattn/emmet-vim.git)
 * [HTML-AutoCloseTag](https://github.com/vim-scripts/HTML-AutoCloseTag.git)
 * [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim.git)
 * [supertab](https://github.com/ervandew/supertab.git)
@@ -82,3 +83,6 @@ git clone https://github.com/honza/vim-snippets.git
 [Writing a custom fold expression](http://vimcasts.org/episodes/writing-a-custom-fold-expression)
 
 * [vim-markdown-folding](https://github.com/nelstrom/vim-markdown-folding.git)
+
+* [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/)
+
