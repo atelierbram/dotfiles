@@ -54,9 +54,9 @@ Observe:
 ## [Installing SnipMate](https://github.com/garbas/vim-snipmate/blob/master/README.md)
 
 We recommend one of the following methods for installing SnipMate and its
-dependencies. SnipMate depends on [vim-addon-mw-utils][mw-utils] and
-[tlib][tlib]. Since SnipMate does not ship with any snippets, we suggest
-looking at the [vim-snippets][vim-snippets] repository.
+dependencies. SnipMate depends on [vim-addon-mw-utils](https://github.com/MarcWeber/vim-addon-mw-utils) and
+[tlib](https://github.com/tomtom/tlib_vim.git). Since SnipMate does not ship with any snippets, we suggest
+looking at the [vim-snippets](https://github.com/honza/vim-snippets) repository.
 
 * Using [Pathogen][pathogen], run the following commands:
 
