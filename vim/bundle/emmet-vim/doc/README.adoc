@@ -1,7 +1,7 @@
 = Tutorial for Emmet.vim
 Yasuhiro Matsumoto <mattn.jp@gmail.com>
 
-adaptation of https://raw.github.com/mattn/emmet-vim/master/doc/emmet.txt[original text-doc]
+adaptation of https://raw.github.com/mattn/emmet-vim/master/TUTORIAL[original text-doc]
 
 === Expand an Abbreviation
 
@@ -263,3 +263,10 @@ Type +<c-y>A+
 ----
 
 
+=== LINKS
+
+* http://emmet.io/[Emmet official site]
+* http://docs.emmet.io/[documentation for Emmet]
+
+* https://plus.google.com/106556399716935975875/posts[Yasuhiro Matsumoto on Google+]
+* http://mattn.kaoriya.net/software/vim/[blogposts on Vim from Mattn in japanese]
