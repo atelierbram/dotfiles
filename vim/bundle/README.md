@@ -3,7 +3,7 @@
 
 ## Plugins
 
-```
+```bash
 cd ~/.vim/bundle copy link - git clone - paste:
 ```
 
