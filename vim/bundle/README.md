@@ -12,6 +12,7 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [scss-syntax.vim](https://github.com/cakebaker/scss-syntax.vim.git)
 * [supertab](https://github.com/ervandew/supertab.git)
 * [tcomment_vim](https://github.com/tomtom/tcomment_vim.git)
+* [vim-colors_atelier-schemes](https://github.com/atelierbram/vim-colors_atelier-schemes.git)
 * [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized.git)
 * [vim-css-color](https://github.com/skammer/vim-css-color.git)
 * [vim-dragvisuals](https://github.com/atweiden/vim-dragvisuals.git)
