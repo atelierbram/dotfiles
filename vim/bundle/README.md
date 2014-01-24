@@ -25,6 +25,8 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search.git)
 * [vim-skip](https://github.com/atelierbram/vim-skip.git)
 * [syntastic](https://github.com/scrooloose/syntastic.git)
+* [CtrlP](https://github.com/kien/ctrlp.vim.git)
+  * [CtrlP info](http://kien.github.io/ctrlp.vim/)
 
 * not on Github:
     * [syntax highlighting for asciidoc-vim on google code](https://asciidoc.googlecode.com/hg/vim/syntax/asciidoc.vim)
@@ -52,6 +54,7 @@ git clone https://github.com/honza/vim-snippets.git
 * [vim-snipmate](https://github.com/garbas/vim-snipmate.git)
 * [vim-snippets](https://github.com/honza/vim-snippets.git)
 
+Use :Helptags to run :helptags on every doc/ directory in your 'runtimepath'
 
 ## Tuts
 * Markdown
