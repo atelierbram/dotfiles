@@ -24,6 +24,7 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [vim-unimpaired](https://github.com/tpope/vim-unimpaired.git)
 * [vim-visual-star-search](https://github.com/nelstrom/vim-visual-star-search.git)
 * [vim-skip](https://github.com/atelierbram/vim-skip.git)
+* [syntastic](https://github.com/scrooloose/syntastic.git)
 
 * not on Github:
     * [syntax highlighting for asciidoc-vim on google code](https://asciidoc.googlecode.com/hg/vim/syntax/asciidoc.vim)
