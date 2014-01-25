@@ -16,7 +16,7 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [vim-colors-solarized](https://github.com/altercation/vim-colors-solarized.git)
 * [vim-css-color](https://github.com/skammer/vim-css-color.git)
 * [vim-dragvisuals](https://github.com/atweiden/vim-dragvisuals.git)
-* [vim-easymotion](https://github.com/Lokaltog/vim-easymotion.git)
+* [vim-easymotion](https://github.com/haya14busa/vim-easymotion.git)
 * [vim-markdown](https://github.com/hallison/vim-markdown.git)
 * [vim-repeat](https://github.com/tpope/vim-repeat.git)
 * [vim-scratch](https://github.com/duff/vim-scratch.git)
@@ -27,6 +27,7 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [syntastic](https://github.com/scrooloose/syntastic.git)
 * [CtrlP](https://github.com/kien/ctrlp.vim.git)
   * [CtrlP info](http://kien.github.io/ctrlp.vim/)
+* [clever-f](https://github.com/rhysd/clever-f.vim.git)
 
 * not on Github:
     * [syntax highlighting for asciidoc-vim on google code](https://asciidoc.googlecode.com/hg/vim/syntax/asciidoc.vim)

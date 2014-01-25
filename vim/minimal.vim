@@ -185,8 +185,9 @@ set ignorecase          " ignore case when searching
 set smartcase           " if searching and search contains upper case, make case sensitive search
 
 " Save on ctrl-s
-map <C-s> <esc>:w<CR>
-imap <C-s> <esc>:w<CR>
+" not working
+" map <c-s> <esc>:w<CR>
+" imap <c-s> <esc>:w<CR>
 
 map <leader>dr :e ~/Dropbox/Apps/Plaintext\\ 2<cr>
 map <leader>zi :e ~/Sites/playground<cr>
@@ -195,6 +196,9 @@ set backupdir=~/.vim-backup,.,/tmp
 set directory=~/.vim-backup,/tmp
 
 syntax enable
+
+" not working
+" set guifont=Consolas:h10
 
 set background=dark
 colorscheme base16-atelierdune
