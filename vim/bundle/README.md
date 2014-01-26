@@ -28,6 +28,8 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [CtrlP](https://github.com/kien/ctrlp.vim.git)
   * [CtrlP info](http://kien.github.io/ctrlp.vim/)
 * [clever-f](https://github.com/rhysd/clever-f.vim.git)
+* [gist-vim](https://github.com/mattn/gist-vim.git)
+  * [webapi-vim, dependency of gist-vim](https://github.com/mattn/webapi-vim.git)
 
 * not on Github:
     * [syntax highlighting for asciidoc-vim on google code](https://asciidoc.googlecode.com/hg/vim/syntax/asciidoc.vim)

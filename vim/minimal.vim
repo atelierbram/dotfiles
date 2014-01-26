@@ -32,7 +32,7 @@ nnoremap <silent><leader>ml <C-W>L
 nnoremap <silent><leader>mk <C-W>K
 nnoremap <silent><leader>mh <C-W>H
 nnoremap <silent><leader>mj <C-W>J
- 
+
 " Maps for jk to act as Esc
 ino jk <esc>
 cno jk <c-c>
@@ -191,7 +191,7 @@ set smartcase           " if searching and search contains upper case, make case
 
 map <leader>dr :e ~/Dropbox/Apps/Plaintext\\ 2<cr>
 map <leader>zi :e ~/Sites/playground<cr>
- 
+
 set backupdir=~/.vim-backup,.,/tmp
 set directory=~/.vim-backup,/tmp
 
@@ -203,3 +203,4 @@ syntax enable
 set background=dark
 colorscheme base16-atelierdune
 
+source $VIMRUNTIME/vimrc_example.vim
