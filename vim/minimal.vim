@@ -197,10 +197,13 @@ set directory=~/.vim-backup,/tmp
 
 syntax enable
 
+" source $VIMRUNTIME/base16-atelierdune.vim
+
 " not working
 " set guifont=Consolas:h10
 
 set background=dark
-colorscheme base16-atelierdune
+" colorscheme base16-atelierdune
+colorscheme badwolf
 
 source $VIMRUNTIME/vimrc_example.vim
