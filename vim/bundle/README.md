@@ -28,6 +28,7 @@ cd ~/.vim/bundle copy link - git clone - paste:
 * [CtrlP](https://github.com/kien/ctrlp.vim.git)
   * [CtrlP info](http://kien.github.io/ctrlp.vim/)
 * [clever-f](https://github.com/rhysd/clever-f.vim.git)
+* [exchange](https://github.com/tommcdo/vim-exchange.git)
 * [gist-vim](https://github.com/mattn/gist-vim.git)
   * [webapi-vim, dependency of gist-vim](https://github.com/mattn/webapi-vim.git)
 
@@ -64,4 +65,5 @@ Use :Helptags to run :helptags on every doc/ directory in your 'runtimepath'
     * [Writing a custom fold expression](http://vimcasts.org/episodes/writing-a-custom-fold-expression)
 * Emmet
     * [Emmet documentation](http://docs.emmet.io/abbreviations/syntax/)
-
+* [exchange on Github](https://github.com/tommcdo/vim-exchange)
+* [Vimcasts: swapping two regions of text with exchange vim](http://vimcasts.org/episodes/swapping-two-regions-of-text-with-exchange-vim/)
