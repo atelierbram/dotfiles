@@ -204,6 +204,11 @@ syntax enable
 
 set background=dark
 " colorscheme base16-atelierdune
-colorscheme badwolf
+" colorscheme badwolf
+colorscheme gruvbox
+
+if !has("gui_running")
+   let g:gruvbox_italic=0
+endif
 
 source $VIMRUNTIME/vimrc_example.vim

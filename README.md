@@ -33,6 +33,36 @@ and/or again
     sudo apachectl restart
 ```
 
+One probably needs to restore the Apache configuration. You’ll need to fix these things in `/etc/apache2/httpd.conf`:
+
+
+read only file, so change permissions, something like:
+
+```
+sudo chmod 775 httpd.conf
+```
+
+or try to edit like this:
+
+```
+sudo v httpd.conf
+```
+
+- re-enable the loading of any modules you need
+- re-enable the include of vhost.conf and ssl.conf if needed
+- restore the &lt;Directory &hellip;&gt; statement so your development directory will work again
+
+```
+<Directory />
+    # Require all granted
+    Options Indexes FollowSymLinks Includes
+    AllowOverride All
+    Order deny,allow
+    Allow from all
+</Directory>
+```
+
+
 ### PHP
 check to see if PHP works, probably not then go to [http://php-osx.liip.ch/](http://php-osx.liip.ch/), and do the One Line Installation, something like this:
 
