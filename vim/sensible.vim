@@ -163,7 +163,7 @@ set wig+=*.o,*.obj,*.pyc
 set wig+=.sass-cache,tmp
 set wildmode=longest:full,list:full
 
-" custom mappings
+"" custom mappings
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
 nnoremap k gk
@@ -312,29 +312,25 @@ map <leader>zi :e ~/Sites/playground<cr>
 set backupdir=~/.vim-backup,.,/tmp
 set directory=~/.vim-backup,/tmp
 
-
-
 set background=dark
-colorscheme gruvbox
-" colorscheme base16-atelierdune
+" colorscheme gruvbox
+colorscheme base16-atelierdune
 " colorscheme badwolf
 "
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
 
-nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
-" inoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_toggle()<CR>a
-" vnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_toggle()<CR>
-nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
-nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
-
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+" nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
+" nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
+" nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
+"
+" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
 
 " https://github.com/morhetz/gruvbox/wiki/Terminal-specific
-if !has("gui_running")
-   let g:gruvbox_italic=0
-endif
+" if !has("gui_running")
+"    let g:gruvbox_italic=0
+" endif
 
 " source matchit plugin: type % to jump from begin - to closing tag
 source $VIMRUNTIME/macros/matchit.vim
