@@ -30,10 +30,8 @@ cd ~/.vim/bundle copy link - git clone - paste:
 - [exchange](https://github.com/tommcdo/vim-exchange.git)
 - [gist-vim](https://github.com/mattn/gist-vim.git)
   - [webapi-vim, dependency of gist-vim](https://github.com/mattn/webapi-vim.git)
-- [vim-marked](https://github.com/itspriddle/vim-marked)
-
-- not on Github:
-    - [syntax highlighting for asciidoc-vim on google code](https://asciidoc.googlecode.com/hg/vim/syntax/asciidoc.vim)
+- [vim-marked](https://github.com/itspriddle/vim-marked.git)
+  - not on Github _(copy to syntax-folder)_: [simple syntax highlighting scheme for asciidoc-vim on Bitbucket](https://bitbucket.org/atelierbram/asciidoc-vim) copied from [google-code](https://asciidoc.googlecode.com/hg/vim/syntax/)
 
 ## [Installing SnipMate](https://github.com/garbas/vim-snipmate/blob/master/README.md)
 
