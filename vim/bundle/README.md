@@ -27,7 +27,6 @@ cd ~/.vim/bundle copy link - git clone - paste:
 - [syntastic](https://github.com/scrooloose/syntastic.git)
 - [CtrlP](https://github.com/kien/ctrlp.vim.git)
   - [CtrlP info](http://kien.github.io/ctrlp.vim/)
-- [clever-f](https://github.com/rhysd/clever-f.vim.git)
 - [exchange](https://github.com/tommcdo/vim-exchange.git)
 - [gist-vim](https://github.com/mattn/gist-vim.git)
   - [webapi-vim, dependency of gist-vim](https://github.com/mattn/webapi-vim.git)
