@@ -131,8 +131,8 @@ set noswapfile                  "noswf: don't litter swap files everywhere
 map <leader>dr :e ~/Dropbox/Apps/Plaintext\\ 2<cr>
 map <leader>zi :e ~/Sites/playground<cr>
 
-set backupdir=~/.vim-backup,.,/tmp
-set directory=~/.vim-backup,/tmp
+set backupdir=~/.nvim-backup,.,/tmp
+set directory=~/.nvim-backup,/tmp
 
 "
 " Hud and status info
@@ -163,7 +163,7 @@ set wig+=*.o,*.obj,*.pyc
 set wig+=.sass-cache,tmp
 set wildmode=longest:full,list:full
 
-"" custom mappings
+" custom mappings
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
 nnoremap k gk
@@ -271,8 +271,8 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 " Allow the cursor to go in to -invalid- places
 set virtualedit=all
 
-" Disable encryption (:X)
-set key=
+" Disable encryption (:X) is not recognized by Neovim
+" set key=
 
 " Make the command-line completion better
 " set wildmenu
@@ -306,8 +306,8 @@ nnoremap <silent>L $
 " map <c-s> <esc>:w<CR>
 " imap <c-s> <esc>:w<CR>
 
-" Font 
-" let g:base16_shell_path="~/Sites/playground/base16-builder/output/shell"
+" Font
+let g:base16_shell_path="~/Sites/base16-builder/output/shell/"
 
 set background=dark
 " set background=light
@@ -315,29 +315,28 @@ set background=dark
 " colorscheme base16-atelierplateau
 " colorscheme base16-atelierheath
 " colorscheme base16-ateliercave
-colorscheme base16-ateliersulphurpool
+" au VimEnter colorscheme base16-ateliersulphurpool
 " colorscheme base16-atelierlakeside
 " colorscheme base16-ateliersavanna
 " colorscheme base16-atelierseaside
 " colorscheme base16-atelierestuary
-" colorscheme base16-atelierdune
+" colorscheme base16-atelierdune 
 " colorscheme gruvbox
-set background=dark
-"
+au VimEnter * colorscheme gruvbox
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
 
-" nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
-" nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
-" nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
+ nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
+ nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
+ nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
 "
-" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
-
+ nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+ nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+ nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+"
 " https://github.com/morhetz/gruvbox/wiki/Terminal-specific
-" if !has("gui_running")
-"    let g:gruvbox_italic=0
-" endif
+ if !has("gui_running")
+    let g:gruvbox_italic=0
+ endif
 
 " source matchit plugin: type % to jump from begin - to closing tag
 source $VIMRUNTIME/macros/matchit.vim

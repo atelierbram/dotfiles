@@ -84,7 +84,7 @@ endif
 "
 set hidden                      "hid:   don't care about closing modified buffers
 set winminheight=0              "wmh:   allow showing windows as just status bars
-set nowrap                      "       soft-wrapping is off by default
+" set nowrap                      "       soft-wrapping is off by default
 
 "
 " Folding
@@ -186,6 +186,8 @@ nnoremap <silent><c-b> :wincmd p<CR>
 " resize window with direction
 nnoremap<silent><F9>  :vertical resize -10<CR>
 " nnoremap <silent><C-F10> :resize -10<CR>
+nnoremap <silent><F10> :vertical resize +80<CR>
+nnoremap <silent><F8> :vertical resize -100<CR>
 " nnoremap <silent><C-F11> :resize +10<CR>
 nnoremap <silent><C-F12> :vertical resize +10<CR>
 nnoremap <silent><leader>cc :close<CR>
@@ -193,7 +195,10 @@ nnoremap <silent><leader>cw :cclose<CR>
 nnoremap <silent><leader>ml <C-W>L
 nnoremap <silent><leader>mk <C-W>K
 nnoremap <silent><leader>mh <C-W>H
-nnoremap <silent><leader>mj <C-W>J
+nnoremap <silent><leader>mj <C-W>J 
+" Shortcut to opening a virtual split to right of current pane
+" Makes more sense than opening to the left
+nnoremap <leader>bv :bel vsp<CR>
 
 " Maps for jk to act as Esc
 " ino jk <Esc>
@@ -220,7 +225,11 @@ set autoindent
 
 " set the search scan to wrap lines
 set wrapscan
-
+:set wrap
+:set linebreak
+" list disables linebreak
+:set nolist
+ 
 " set the forward slash to be the slash of note.  Backslashes suck
 set shellslash
 
@@ -305,36 +314,38 @@ nnoremap <silent>L $
 " not working
 " map <c-s> <esc>:w<CR>
 " imap <c-s> <esc>:w<CR>
-
-map <leader>dr :e ~/Dropbox/Apps/Plaintext\\ 2<cr>
-map <leader>zi :e ~/Sites/playground<cr>
-
-set backupdir=~/.vim-backup,.,/tmp
-set directory=~/.vim-backup,/tmp
-
-
+"
+" Font
+" let g:base16_shell_path="~/Sites/playground/base16-builder/output/shell"
 
 set background=dark
-colorscheme gruvbox
+" set background=light
+" colorscheme base16-atelierforest
+" colorscheme base16-atelierplateau
+" colorscheme base16-atelierheath
+" colorscheme base16-ateliercave
+colorscheme base16-ateliersulphurpool
+" colorscheme base16-atelierlakeside
+" colorscheme base16-ateliersavanna
+" colorscheme base16-atelierseaside
+" colorscheme base16-atelierestuary
 " colorscheme base16-atelierdune
-" colorscheme badwolf
+" colorscheme gruvbox
 "
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
 
-nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
-" inoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_toggle()<CR>a
-" vnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_toggle()<CR>
-nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
-nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
-
-nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
-nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
-nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
-
+" nnoremap <silent> <Leader><Space> :call gruvbox#hls_show()<CR>
+" nnoremap <silent> <Leader><Space> <ESC>:call gruvbox#hls_hide()<CR>
+" nnoremap <silent> <Leader><Leader><Space> :call gruvbox#hls_toggle()<CR>
+"
+" nnoremap * :let @/ = ""<CR>:call gruvbox#hls_show()<CR>*
+" nnoremap / :let @/ = ""<CR>:call gruvbox#hls_show()<CR>/
+" nnoremap ? :let @/ = ""<CR>:call gruvbox#hls_show()<CR>?
+"
 " https://github.com/morhetz/gruvbox/wiki/Terminal-specific
-if !has("gui_running")
-   let g:gruvbox_italic=0
-endif
+" if !has("gui_running")
+"    let g:gruvbox_italic=0
+" endif
 
 " source matchit plugin: type % to jump from begin - to closing tag
 source $VIMRUNTIME/macros/matchit.vim
