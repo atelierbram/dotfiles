@@ -9,108 +9,15 @@
 
 * Backup your system
 * Upgrade OSX
+* Install Homebrew
 * Upgrade Xcode and run it at least once, [installing the commandline tools from terminal](http://www.computersnyou.com/2025/2013/06/install-command-line-tools-in-osx-10-9-mavericks-how-to/) :
-
-```
-    xcode-select --install
-```
-
-
-* Reboot your system (between steps)
-
-* Apache
-* PHP
-* MySQL
-* PEAR/PECL/other
-* RVM/Ruby
-
-### Apache
-check to see if apache is running; go to `http://localhost`, if not start apache:
-
-and/or again
-
-```
-    sudo apachectl restart
-```
-
-One probably needs to restore the Apache configuration. You’ll need to fix these things in `/etc/apache2/httpd.conf`:
-
-
-read only file, so change permissions, something like:
-
-```
-sudo chmod 775 httpd.conf
-```
-
-or try to edit like this:
-
-```
-sudo v httpd.conf
-```
-
-- re-enable the loading of any modules you need
-- re-enable the include of vhost.conf and ssl.conf if needed
-- restore the &lt;Directory &hellip;&gt; statement so your development directory will work again
-
-```
-<Directory />
-    # Require all granted
-    Options Indexes FollowSymLinks Includes
-    AllowOverride All
-    Order deny,allow
-    Allow from all
-</Directory>
-```
-
-
-### PHP
-check to see if PHP works, probably not then go to [http://php-osx.liip.ch/](http://php-osx.liip.ch/), and do the One Line Installation, something like this:
-
-```
-    curl -s http://php-osx.liip.ch/install.sh | bash -s 5.5
-```
-
-### RVM and Ruby
-reinstall RVM and Ruby (if necessary):
-
-* maybe uncomment those paths directions in `.bashrc`, `.profile` and `.bash_profile`
-* uninstall RVM
-
-```
-    rvm implode
-```
-
-also close (and re-open if needed) the terminal afterwards.
-
-* now [reinstall RVM with ruby](http://rvm.io/rvm/install)
-
-```
-    \curl -sSL https://get.rvm.io | bash -s stable --ruby
-```
-
-quit terminal, maybe reboot, when all works, be happy installing gems
-
-### Gems
-
-* [compass with sass](http://compass-style.org/help/)
-
-```
-    gem install compass
-```
-
-* [autoprefixer](https://github.com/ai/autoprefixer)
-
-```
-    gem install autoprefixer-rails
-```
-
 
 ### [Homebrew](https://digitizor.com/install-homebrew-osx-el-capitan/)
 Installing Homebrew on Mac OS X prior to El Capitan (that is Yosemite, Mavericks and others) used to be a breeze. But with a new change in OS X El Capitan called SIP - installing Homebrew has become a bit complicated.
 
 There are two parts to this tutorial. If you want to uninstall or delete Homebrew first and then re-install it on El Capitan then follow Part 2 of this tutorial below. However, if you are doing a fresh installation of El Capitan then follow the steps outlined in Part 1 of this tutorial.kj
 
-#### Part 1: How to install fresh copy of Homebrew in OS X El Capitan 
+#### Part 1: How to install fresh copy of Homebrew in OS X El Capitan
 Step 1 - Install XCode by downloading it from here. This is needed for installing the XCode command line tools which in turn is needed by Homebrew. You might skip this step if you already have XCode installed.
 
 Quick Note - If you already have XCode installed then go to STep 2. Also, You can skip this step and jump to Step 3 instead and see if the Homebrew installer complains about XCode command line tools. If it does, then come back to this step and continue.
@@ -192,6 +99,111 @@ If it returns any error, try fixing them. If you see just warnings then you coul
 
 At this point you have succesfully installed Homebrew on El Capitan and you can use the commands mentioned above to perform various operations.
 
+***   ***   ***   ***   ***   ***   ***   ***   ***
+
+### Xcode
+```bash
+    xcode-select --install
+```
+
+* Reboot your system (between steps)
+
+* Apache
+* PHP
+* MySQL
+* PEAR/PECL/other
+* RVM/Ruby
+
+### Apache
+check to see if apache is running; go to `http://localhost`, if not start apache:
+
+and/or again
+
+```bash
+    sudo apachectl -k restart
+```
+
+One probably needs to restore the Apache configuration. You’ll need to fix these things in `/etc/apache2/httpd.conf`:
+
+
+read only file, so change permissions, something like:
+
+```bash
+sudo chmod 775 httpd.conf
+```
+
+or try to edit like this:
+
+```bash
+sudo v httpd.conf
+```
+
+- re-enable the loading of any modules you need
+- re-enable the include of vhost.conf and ssl.conf if needed
+- restore the &lt;Directory &hellip;&gt; statement so your development directory will work again
+
+```bash
+<Directory />
+    # Require all granted
+    Options Indexes FollowSymLinks Includes
+    AllowOverride All
+    Order deny,allow
+    Allow from all
+</Directory>
+```
+
+### PHP
+Check to see [if PHP works](http://localhost/), maybe check upon `/etc/apache2/httpd.conf`, see if the `loadModule php5_module` matches the current one installed. It can look like:
+
+```bash
+LoadModule php5_module libexec/apache2/libphp5.so
+```
+
+or like this:
+
+```bash
+LoadModule php5_module /usr/local/php5/libphp5.so
+```
+
+when you are using the version from [http://php-osx.liip.ch/](http://php-osx.liip.ch/), and do/redo the “One Line Installation”, something like this:
+
+```bash
+curl -s https://php-osx.liip.ch/install.sh | bash -s 5.6
+```
+
+### RVM and Ruby
+reinstall RVM and Ruby (if necessary):
+
+* maybe uncomment those paths directions in `.bashrc`, `.profile` and `.bash_profile`
+* uninstall RVM
+
+```bash
+    rvm implode
+```
+
+also close (and re-open if needed) the terminal afterwards.
+
+* now [reinstall RVM with ruby](http://rvm.io/rvm/install)
+
+```bash
+    \curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+
+quit terminal, maybe reboot, when all works, be happy installing gems
+
+### Gems
+
+* [compass with sass](http://compass-style.org/help/)
+
+```bash
+    gem install compass
+```
+
+* [autoprefixer](https://github.com/ai/autoprefixer)
+
+```bash
+    gem install autoprefixer-rails
+```
 
 ### Node and NPM
 Maybe redownload Node <https://nodejs.org/en/download/> and/or [fix permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions).
