@@ -1,7 +1,6 @@
 " sensible.vim - Defaults everyone can agree on
 " Maintainer:   Tim Pope <http://tpo.pe/>
 " Version:      1.1
-
 if has('autocmd')
   filetype plugin indent on
 endif
@@ -324,13 +323,14 @@ set background=dark
 " colorscheme base16-atelierplateau
 " colorscheme base16-atelierheath
 " colorscheme base16-ateliercave
-colorscheme base16-ateliersulphurpool
+" colorscheme base16-ateliersulphurpool
 " colorscheme base16-atelierlakeside
 " colorscheme base16-ateliersavanna
 " colorscheme base16-atelierseaside
 " colorscheme base16-atelierestuary
 " colorscheme base16-atelierdune
-" colorscheme gruvbox
+"
+colorscheme gruvbox
 "
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
 
