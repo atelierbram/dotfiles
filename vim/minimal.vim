@@ -194,7 +194,7 @@ nnoremap <silent><leader>cw :cclose<CR>
 nnoremap <silent><leader>ml <C-W>L
 nnoremap <silent><leader>mk <C-W>K
 nnoremap <silent><leader>mh <C-W>H
-nnoremap <silent><leader>mj <C-W>J 
+nnoremap <silent><leader>mj <C-W>J
 " Shortcut to opening a virtual split to right of current pane
 " Makes more sense than opening to the left
 nnoremap <leader>bv :bel vsp<CR>
@@ -228,7 +228,7 @@ set wrapscan
 :set linebreak
 " list disables linebreak
 :set nolist
- 
+
 " set the forward slash to be the slash of note.  Backslashes suck
 set shellslash
 
@@ -308,6 +308,18 @@ let loaded_matchparen = 1
 nnoremap <silent>H 0
 " L - in normal mode to go to end of line, just like - $
 nnoremap <silent>L $
+
+" syntax highlighting for different filetypes
+au BufNewFile,BufRead *.scss set filetype=scss
+au BufNewFile,BufRead *.inc set filetype=php
+au BufNewFile,BufRead *.md set filetype=mkd
+au BufNewFile,BufRead *.markdown set filetype=mkd
+au BufNewFile,BufRead *.txt set filetype=mkd
+au BufNewFile,BufRead *.asciidoc set syntax=asciidoc
+au BufNewFile,BufRead *.adoc set filetype=asciidoc
+au BufNewFile,BufRead *.nunjucks set filetype=jinja
+au BufNewFile,BufRead *.njk set filetype=jinja
+au BufNewFile,BufRead *.twig set filetype=jinja
 
 " Save on ctrl-s
 " not working
