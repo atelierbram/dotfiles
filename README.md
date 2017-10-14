@@ -17,6 +17,8 @@ Installing Homebrew on Mac OS X prior to El Capitan (that is Yosemite, Mavericks
 
 There are two parts to this tutorial. If you want to uninstall or delete Homebrew first and then re-install it on El Capitan then follow Part 2 of this tutorial below. However, if you are doing a fresh installation of El Capitan then follow the steps outlined in Part 1 of this tutorial.kj
 
+With the release of macOS Sierra the Apache module is now not built by default. If you want to build it on your system you have to install php with the --with-httpd option. See  brew options php70 for more details.
+
 #### Part 1: How to install fresh copy of Homebrew in OS X El Capitan
 Step 1 - Install XCode by downloading it from here. This is needed for installing the XCode command line tools which in turn is needed by Homebrew. You might skip this step if you already have XCode installed.
 
