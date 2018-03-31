@@ -1,3 +1,5 @@
+# Deprecated, use minpac, see `packages.vim`
+
 ## Pathogen
 [Use Tim Pope's Pathogen](https://github.com/tpope/vim-pathogen)
 
