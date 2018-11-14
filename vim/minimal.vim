@@ -1,6 +1,18 @@
 " sensible.vim - Defaults everyone can agree on
 " Maintainer:   Tim Pope <http://tpo.pe/>
 " Version:      1.1
+if !has('nvim')
+  unlet! skip_defaults_vim
+  source $VIMRUNTIME/defaults.vim
+" Disable encryption (:X)
+  set key=
+source $VIMRUNTIME/macros/matchit.vim
+source $VIMRUNTIME/vimrc_example.vim
+else
+" https://github.com/neovim/neovim/wiki/FAQ
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+endif
+
 if has('autocmd')
   filetype plugin indent on
 endif
@@ -280,7 +292,7 @@ set foldopen=block,insert,jump,mark,percent,quickfix,search,tag,undo
 set virtualedit=all
 
 " Disable encryption (:X)
-set key=
+" set key=
 
 " Make the command-line completion better
 " set wildmenu
@@ -328,6 +340,10 @@ au BufNewFile,BufRead *.twig set filetype=jinja
 "
 " Font
 " let g:base16_shell_path="~/Sites/playground/base16-builder/output/shell"
+set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'Base2Tone_Pool',
+      \ }
 
 set background=dark
 " set background=light
@@ -342,7 +358,10 @@ set background=dark
 " colorscheme base16-atelierestuary
 " colorscheme base16-atelierdune
 "
-colorscheme gruvbox
+" colorscheme gruvbox
+if !has('nvim')
+  colorscheme Base2Tone_PoolDark
+endif
 "
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
 
@@ -360,5 +379,5 @@ colorscheme gruvbox
 " endif
 
 " source matchit plugin: type % to jump from begin - to closing tag
-source $VIMRUNTIME/macros/matchit.vim
-source $VIMRUNTIME/vimrc_example.vim
+" source $VIMRUNTIME/macros/matchit.vim
+" source $VIMRUNTIME/vimrc_example.vim
