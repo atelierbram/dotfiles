@@ -27,6 +27,8 @@ call minpac#add('atweiden/vim-dragvisuals')
 call minpac#add('haya14busa/vim-easymotion')
 call minpac#add('tommcdo/vim-exchange')
 call minpac#add('duff/vim-scratch')
+call minpac#add('hostsamurai/CSSMinister.vim')
+" call minpac#add('itchyny/lightline.vim', {'type': 'opt'})
 call minpac#add('itchyny/lightline.vim')
 " call minpac#add('Valloric/YouCompleteMe')
 
@@ -41,15 +43,22 @@ call minpac#add('skammer/vim-css-color', {'type': 'opt'})
 call minpac#add('jelera/vim-javascript-syntax')
 call minpac#add('mustache/vim-mustache-handlebars', {'type': 'opt'})
 call minpac#add('hallison/vim-markdown')
+" call minpac#add('hail2u/vim-css3-syntax')
 call minpac#add('Glench/Vim-Jinja2-Syntax', {'type': 'opt'})
 " call minpac#add('pangloss/vim-javascript')
+call minpac#add('posva/vim-vue', {'type': 'opt'})
+" call minpac#add('chrisbra/matchit.vim')
 
 " Colorschemes
 call minpac#add('lifepillar/vim-solarized8', {'type': 'opt'})
 call minpac#add('morhetz/gruvbox', {'type': 'opt'})
+" call minpac#add('lifepillar/vim-gruvbox8')
+" call minpac#add('lifepillar/vim-colortemplate')
+
 
 " Colorschemes development
-call minpac#add('gerw/vim-HiLinkTrace', {'type': 'opt'})
+" call minpac#add('gerw/vim-HiLinkTrace', {'type': 'opt'})
+call minpac#add('gerw/vim-HiLinkTrace')
 
 " Application
 call minpac#add('itspriddle/vim-marked')
@@ -58,6 +67,7 @@ call minpac#add('henrik/vim-reveal-in-finder')
 
 " Disabled
 " call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-airline/vim-airline', {'type': 'opt'})
 " call minpac#add('vim-airline/vim-airline-themes', {'type': 'opt'})
 " call minpac#add('drzel/vim-line-no-indicator')
 

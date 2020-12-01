@@ -3,7 +3,8 @@
 " Version:      1.1
 if !has('nvim')
   unlet! skip_defaults_vim
-  source $VIMRUNTIME/defaults.vim
+  " source $VIMRUNTIME/defaults.vim
+  source /Users/bram/Sites/github.com/atelierbram/dotfiles/vim/defaults.vim
 " Disable encryption (:X)
   set key=
 source $VIMRUNTIME/macros/matchit.vim
@@ -22,6 +23,7 @@ endif
 
 set complete-=i
 set smarttab
+set cursorline
 
 set nrformats-=octal
 
@@ -341,26 +343,19 @@ au BufNewFile,BufRead *.twig set filetype=jinja
 " Font
 " let g:base16_shell_path="~/Sites/playground/base16-builder/output/shell"
 set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'Base2Tone_Pool',
-      \ }
+" let g:lightline = {
+"       \ 'colorscheme': 'Base2Tone_Pool',
+"       \ }
 
 set background=dark
 " set background=light
-" colorscheme base16-atelierforest
-" colorscheme base16-atelierplateau
-" colorscheme base16-atelierheath
-" colorscheme base16-ateliercave
-" colorscheme base16-ateliersulphurpool
-" colorscheme base16-atelierlakeside
-" colorscheme base16-ateliersavanna
-" colorscheme base16-atelierseaside
-" colorscheme base16-atelierestuary
-" colorscheme base16-atelierdune
 "
+" colorscheme solarized8
 " colorscheme gruvbox
+colorscheme Base4Tone_Modern_N_Dark
+
 if !has('nvim')
-  colorscheme Base2Tone_PoolDark
+"  colorscheme solarized8
 endif
 "
 " Since gruvbox inverts cursor color, it could be awkward to determine current position, when the search is highlighted. To get single cursor color while searching, map these gruvbox functions somewhere after unimpaired is loaded:
